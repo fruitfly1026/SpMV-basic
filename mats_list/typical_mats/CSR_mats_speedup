@@ -1,0 +1,186 @@
+/home/exchange/matrices/MM/ACUSIM/Pres_Poisson/Pres_Poisson.mtx
+Speedup : 2.431885
+/home/exchange/matrices/MM/DNVS/trdheim/trdheim.mtx
+Speedup : 2.196063
+/home/exchange/matrices/MM/DNVS/troll/troll.mtx
+Speedup : 2.196063
+/home/exchange/matrices/MM/DNVS/tsyl201/tsyl201.mtx
+Speedup : 2.196063
+/home/exchange/matrices/MM/DNVS/x104/x104.mtx
+Speedup : 2.196063
+/home/exchange/matrices/MM/DRIVCAV/cavity02/cavity02.mtx
+Speedup : 2.043837
+/home/exchange/matrices/MM/DRIVCAV/cavity04/cavity04.mtx
+Speedup : 2.079041
+/home/exchange/matrices/MM/DRIVCAV/cavity05/cavity05.mtx
+Speedup : 2.075922
+/home/exchange/matrices/MM/DRIVCAV/cavity06/cavity06.mtx
+Speedup : 2.094177
+/home/exchange/matrices/MM/DRIVCAV/cavity07/cavity07.mtx
+Speedup : 2.069403
+/home/exchange/matrices/MM/DRIVCAV/cavity08/cavity08.mtx
+Speedup : 2.100447
+/home/exchange/matrices/MM/DRIVCAV/cavity09/cavity09.mtx
+Speedup : 2.085009
+/home/exchange/matrices/MM/DRIVCAV/cavity10/cavity10.mtx
+Speedup : 2.168423
+/home/exchange/matrices/MM/DRIVCAV/cavity11/cavity11.mtx
+Speedup : 2.221525
+/home/exchange/matrices/MM/DRIVCAV/cavity12/cavity12.mtx
+Speedup : 2.164847
+/home/exchange/matrices/MM/DRIVCAV/cavity13/cavity13.mtx
+Speedup : 2.220319
+/home/exchange/matrices/MM/DRIVCAV/cavity14/cavity14.mtx
+Speedup : 2.167200
+/home/exchange/matrices/MM/DRIVCAV/cavity15/cavity15.mtx
+Speedup : 2.218279
+/home/exchange/matrices/MM/DRIVCAV/cavity16/cavity16.mtx
+Speedup : 2.188355
+/home/exchange/matrices/MM/DRIVCAV/cavity17/cavity17.mtx
+Speedup : 2.231000
+/home/exchange/matrices/MM/DRIVCAV/cavity18/cavity18.mtx
+Speedup : 2.189700
+/home/exchange/matrices/MM/DRIVCAV/cavity19/cavity19.mtx
+Speedup : 2.229608
+/home/exchange/matrices/MM/DRIVCAV/cavity20/cavity20.mtx
+Speedup : 2.188456
+/home/exchange/matrices/MM/DRIVCAV/cavity21/cavity21.mtx
+Speedup : 2.233486
+/home/exchange/matrices/MM/DRIVCAV/cavity22/cavity22.mtx
+Speedup : 2.190556
+/home/exchange/matrices/MM/DRIVCAV/cavity23/cavity23.mtx
+Speedup : 2.232073
+/home/exchange/matrices/MM/DRIVCAV/cavity24/cavity24.mtx
+Speedup : 2.184121
+/home/exchange/matrices/MM/DRIVCAV/cavity25/cavity25.mtx
+Speedup : 2.232305
+/home/exchange/matrices/MM/DRIVCAV/cavity26/cavity26.mtx
+Speedup : 2.190026
+/home/exchange/matrices/MM/FIDAP/ex21/ex21.mtx
+Speedup : 2.133974
+/home/exchange/matrices/MM/FIDAP/ex23/ex23.mtx
+Speedup : 2.114642
+/home/exchange/matrices/MM/FIDAP/ex31/ex31.mtx
+Speedup : 2.154306
+/home/exchange/matrices/MM/FIDAP/ex3/ex3.mtx
+Speedup : 2.076773
+/home/exchange/matrices/MM/FIDAP/ex7/ex7.mtx
+Speedup : 2.211670
+/home/exchange/matrices/MM/FIDAP/ex8/ex8.mtx
+Speedup : 2.043148
+/home/exchange/matrices/MM/GHS_indef/exdata_1/exdata_1.mtx
+Speedup : 3.028287
+/home/exchange/matrices/MM/Goodwin/goodwin/goodwin.mtx
+Speedup : 2.363271
+/home/exchange/matrices/MM/Goodwin/rim/rim.mtx
+Speedup : 2.363271
+/home/exchange/matrices/MM/Graham/graham1/graham1.mtx
+Speedup : 2.245700
+/home/exchange/matrices/MM/HB/bcsstk04/bcsstk04.mtx
+Speedup : 2.062196
+/home/exchange/matrices/MM/HB/bcsstk28/bcsstk28.mtx
+Speedup : 2.357248
+/home/exchange/matrices/MM/HB/bcsstk29/bcsstk29.mtx
+Speedup : 2.244511
+/home/exchange/matrices/MM/HB/bcsstk30/bcsstk30.mtx
+Speedup : 2.244511
+/home/exchange/matrices/MM/HB/bcsstk31/bcsstk31.mtx
+Speedup : 2.117450
+/home/exchange/matrices/MM/HB/bcsstk32/bcsstk32.mtx
+Speedup : 2.117450
+/home/exchange/matrices/MM/HB/bcsstk33/bcsstk33.mtx
+Speedup : 2.117450
+/home/exchange/matrices/MM/HB/beause/beause.mtx
+Speedup : 2.014298
+/home/exchange/matrices/MM/HB/lock1074/lock1074.mtx
+Speedup : 2.352704
+/home/exchange/matrices/MM/HB/lock3491/lock3491.mtx
+Speedup : 2.394293
+/home/exchange/matrices/MM/HB/lock_700/lock_700.mtx
+Speedup : 2.158255
+/home/exchange/matrices/MM/HB/mbeause/mbeause.mtx
+Speedup : 2.150118
+/home/exchange/matrices/MM/JGD_CAG/CAG_mat364/CAG_mat364.mtx
+Speedup : 2.025713
+/home/exchange/matrices/MM/JGD_Groebner/c8_mat11/c8_mat11.mtx
+Speedup : 2.956447
+/home/exchange/matrices/MM/JGD_Groebner/c8_mat11_I/c8_mat11_I.mtx
+Speedup : 2.952352
+/home/exchange/matrices/MM/JGD_Groebner/f855_mat9/f855_mat9.mtx
+Speedup : 2.379598
+/home/exchange/matrices/MM/JGD_Groebner/f855_mat9_I/f855_mat9_I.mtx
+Speedup : 2.376035
+/home/exchange/matrices/MM/JGD_Groebner/HFE18_96_in/HFE18_96_in.mtx
+Speedup : 3.014392
+/home/exchange/matrices/MM/JGD_Groebner/rkat7_mat5/rkat7_mat5.mtx
+Speedup : 2.432330
+/home/exchange/matrices/MM/JGD_Groebner/robot24c1_mat5_J/robot24c1_mat5_J.mtx
+Speedup : 2.093703
+/home/exchange/matrices/MM/JGD_Groebner/robot24c1_mat5/robot24c1_mat5.mtx
+Speedup : 2.133166
+/home/exchange/matrices/MM/JGD_Kocay/Trec11/Trec11.mtx
+Speedup : 2.181255
+/home/exchange/matrices/MM/JGD_Kocay/Trec12/Trec12.mtx
+Speedup : 2.294311
+/home/exchange/matrices/MM/JGD_Kocay/Trec13/Trec13.mtx
+Speedup : 2.497784
+/home/exchange/matrices/MM/JGD_Kocay/Trec14/Trec14.mtx
+Speedup : 2.253813
+/home/exchange/matrices/MM/JGD_Kocay/Trec9/Trec9.mtx
+Speedup : 2.338182
+/home/exchange/matrices/MM/LPnetlib/lp_wood1p/lp_wood1p.mtx
+Speedup : 2.982522
+/home/exchange/matrices/MM/LPnetlib/lp_woodw/lp_woodw.mtx
+Speedup : 2.308914
+/home/exchange/matrices/MM/MathWorks/tomography/tomography.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/aa01/aa01.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/aa03/aa03.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/aa3/aa3.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/aa4/aa4.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/aa5/aa5.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/aa6/aa6.mtx
+Speedup : 2.337270
+/home/exchange/matrices/MM/Meszaros/air02/air02.mtx
+Speedup : 2.587409
+/home/exchange/matrices/MM/Meszaros/air03/air03.mtx
+Speedup : 2.792521
+/home/exchange/matrices/MM/Meszaros/air04/air04.mtx
+Speedup : 2.434993
+/home/exchange/matrices/MM/Meszaros/air05/air05.mtx
+Speedup : 2.434993
+/home/exchange/matrices/MM/Meszaros/air06/air06.mtx
+Speedup : 2.434993
+/home/exchange/matrices/MM/Meszaros/crew1/crew1.mtx
+Speedup : 2.811266
+/home/exchange/matrices/MM/Meszaros/kl02/kl02.mtx
+Speedup : 2.669090
+/home/exchange/matrices/MM/Meszaros/nw14/nw14.mtx
+Speedup : 2.825527
+/home/exchange/matrices/MM/Meszaros/rosen7/rosen7.mtx
+Speedup : 2.119086
+/home/exchange/matrices/MM/Meszaros/rosen8/rosen8.mtx
+Speedup : 2.119086
+/home/exchange/matrices/MM/Meszaros/us04/us04.mtx
+Speedup : 2.671864
+/home/exchange/matrices/MM/Norris/heart1/heart1.mtx
+Speedup : 3.168591
+/home/exchange/matrices/MM/Norris/heart2/heart2.mtx
+Speedup : 2.718280
+/home/exchange/matrices/MM/Norris/heart3/heart3.mtx
+Speedup : 2.730074
+/home/exchange/matrices/MM/Simon/bbmat/bbmat.mtx
+Speedup : 2.311827
+/home/exchange/matrices/MM/TKK/t520/t520.mtx
+Speedup : 2.482812
+/home/exchange/matrices/MM/TKK/tube1/tube1.mtx
+Speedup : 2.383541
+/home/exchange/matrices/MM/TKK/tube2/tube2.mtx
+Speedup : 2.383541
+/home/exchange/matrices/MM/Zitney/rdist3a/rdist3a.mtx
+Speedup : 2.220506

@@ -1,0 +1,148 @@
+/home/exchange/matrices/MM/Bai/bwm2000/bwm2000.mtx
+Speedup : 2.417051
+/home/exchange/matrices/MM/Bai/bwm200/bwm200.mtx
+Speedup : 5.196522
+/home/exchange/matrices/MM/Bai/cdde2/cdde2.mtx
+Speedup : 2.178969
+/home/exchange/matrices/MM/Bai/cdde4/cdde4.mtx
+Speedup : 2.221686
+/home/exchange/matrices/MM/Bai/cryg10000/cryg10000.mtx
+Speedup : 3.595071
+/home/exchange/matrices/MM/Bai/cryg2500/cryg2500.mtx
+Speedup : 4.359172
+/home/exchange/matrices/MM/Bai/odepb400/odepb400.mtx
+Speedup : 5.009750
+/home/exchange/matrices/MM/Bai/pde225/pde225.mtx
+Speedup : 4.194917
+/home/exchange/matrices/MM/Bai/pde2961/pde2961.mtx
+Speedup : 3.851030
+/home/exchange/matrices/MM/Bai/rdb1250l/rdb1250l.mtx
+Speedup : 3.784344
+/home/exchange/matrices/MM/Bai/rdb200/rdb200.mtx
+Speedup : 3.330053
+/home/exchange/matrices/MM/Bai/rdb3200l/rdb3200l.mtx
+Speedup : 3.172580
+/home/exchange/matrices/MM/Bai/rdb450/rdb450.mtx
+Speedup : 3.066834
+/home/exchange/matrices/MM/Bai/rdb5000/rdb5000.mtx
+Speedup : 2.732368
+/home/exchange/matrices/MM/Bai/tub1000/tub1000.mtx
+Speedup : 2.279783
+/home/exchange/matrices/MM/Bai/tub100/tub100.mtx
+Speedup : 1.768109
+/home/exchange/matrices/MM/Boeing/bcsstm39/bcsstm39.mtx
+Speedup : 2.640536
+/home/exchange/matrices/MM/Cunningham/m3plates/m3plates.mtx
+Speedup : 3.184269
+/home/exchange/matrices/MM/FIDAP/ex29/ex29.mtx
+Speedup : 4.021614
+/home/exchange/matrices/MM/GHS_indef/dixmaanl/dixmaanl.mtx
+Speedup : 2.668641
+/home/exchange/matrices/MM/GHS_indef/laser/laser.mtx
+Speedup : 1.790663
+/home/exchange/matrices/MM/GHS_indef/qpband/qpband.mtx
+Speedup : 2.398460
+/home/exchange/matrices/MM/GHS_indef/spmsrtls/spmsrtls.mtx
+Speedup : 2.507372
+/home/exchange/matrices/MM/GHS_psdef/jnlbrng1/jnlbrng1.mtx
+Speedup : 2.600055
+/home/exchange/matrices/MM/GHS_psdef/obstclae/obstclae.mtx
+Speedup : 2.623588
+/home/exchange/matrices/MM/GHS_psdef/torsion1/torsion1.mtx
+Speedup : 2.637761
+/home/exchange/matrices/MM/Gset/G12/G12.mtx
+Speedup : 1.316051
+/home/exchange/matrices/MM/Gset/G32/G32.mtx
+Speedup : 1.449681
+/home/exchange/matrices/MM/Gset/G48/G48.mtx
+Speedup : 2.137334
+/home/exchange/matrices/MM/Gset/G49/G49.mtx
+Speedup : 1.810604
+/home/exchange/matrices/MM/Gset/G50/G50.mtx
+Speedup : 2.607574
+/home/exchange/matrices/MM/Gset/G57/G57.mtx
+Speedup : 1.699035
+/home/exchange/matrices/MM/Gset/G62/G62.mtx
+Speedup : 2.422622
+/home/exchange/matrices/MM/Gset/G65/G65.mtx
+Speedup : 2.153333
+/home/exchange/matrices/MM/Gset/G66/G66.mtx
+Speedup : 2.417938
+/home/exchange/matrices/MM/Gset/G67/G67.mtx
+Speedup : 2.396089
+/home/exchange/matrices/MM/HB/bcsstk03/bcsstk03.mtx
+Speedup : 1.852151
+/home/exchange/matrices/MM/HB/bcsstm03/bcsstm03.mtx
+Speedup : 3.864994
+/home/exchange/matrices/MM/HB/bcsstm04/bcsstm04.mtx
+Speedup : 3.800837
+/home/exchange/matrices/MM/HB/bcsstm05/bcsstm05.mtx
+Speedup : 6.886442
+/home/exchange/matrices/MM/HB/bcsstm06/bcsstm06.mtx
+Speedup : 4.820452
+/home/exchange/matrices/MM/HB/bcsstm08/bcsstm08.mtx
+Speedup : 5.026952
+/home/exchange/matrices/MM/HB/bcsstm09/bcsstm09.mtx
+Speedup : 4.993235
+/home/exchange/matrices/MM/HB/bcsstm11/bcsstm11.mtx
+Speedup : 5.174424
+/home/exchange/matrices/MM/HB/bcsstm19/bcsstm19.mtx
+Speedup : 4.957447
+/home/exchange/matrices/MM/HB/bcsstm20/bcsstm20.mtx
+Speedup : 4.840813
+/home/exchange/matrices/MM/HB/bcsstm21/bcsstm21.mtx
+Speedup : 2.036482
+/home/exchange/matrices/MM/HB/bcsstm22/bcsstm22.mtx
+Speedup : 4.019235
+/home/exchange/matrices/MM/HB/bcsstm23/bcsstm23.mtx
+Speedup : 2.024084
+/home/exchange/matrices/MM/HB/bcsstm24/bcsstm24.mtx
+Speedup : 3.228809
+/home/exchange/matrices/MM/HB/bcsstm25/bcsstm25.mtx
+Speedup : 3.649323
+/home/exchange/matrices/MM/HB/bcsstm26/bcsstm26.mtx
+Speedup : 3.048124
+/home/exchange/matrices/MM/HB/gr_30_30/gr_30_30.mtx
+Speedup : 2.472265
+/home/exchange/matrices/MM/HB/nos1/nos1.mtx
+Speedup : 2.908685
+/home/exchange/matrices/MM/HB/nos7/nos7.mtx
+Speedup : 4.680553
+/home/exchange/matrices/MM/HB/orsreg_1/orsreg_1.mtx
+Speedup : 4.617255
+/home/exchange/matrices/MM/HB/saylr1/saylr1.mtx
+Speedup : 4.162726
+/home/exchange/matrices/MM/HB/saylr4/saylr4.mtx
+Speedup : 3.675519
+/home/exchange/matrices/MM/HB/sherman1/sherman1.mtx
+Speedup : 1.593964
+/home/exchange/matrices/MM/JGD_BIBD/bibd_81_2/bibd_81_2.mtx
+Speedup : 2.029181
+/home/exchange/matrices/MM/JGD_Trefethen/Trefethen_200/Trefethen_200.mtx
+Speedup : 3.077416
+/home/exchange/matrices/MM/MathWorks/pivtol/pivtol.mtx
+Speedup : 3.711609
+/home/exchange/matrices/MM/Norris/fv1/fv1.mtx
+Speedup : 3.547148
+/home/exchange/matrices/MM/Norris/fv2/fv2.mtx
+Speedup : 3.566363
+/home/exchange/matrices/MM/Norris/fv3/fv3.mtx
+Speedup : 3.547525
+/home/exchange/matrices/MM/Oberwolfach/LF10000/LF10000.mtx
+Speedup : 2.185897
+/home/exchange/matrices/MM/Oberwolfach/t2dal_e/t2dal_e.mtx
+Speedup : 3.668764
+/home/exchange/matrices/MM/Oberwolfach/t3dl_e/t3dl_e.mtx
+Speedup : 3.265367
+/home/exchange/matrices/MM/TKK/t2d_q4/t2d_q4.mtx
+Speedup : 3.522916
+/home/exchange/matrices/MM/TKK/t2d_q9/t2d_q9.mtx
+Speedup : 3.477168
+/home/exchange/matrices/MM/Wang/wang1/wang1.mtx
+Speedup : 1.937054
+/home/exchange/matrices/MM/Wang/wang2/wang2.mtx
+Speedup : 1.933870
+/home/exchange/matrices/MM/Watson/Baumann/Baumann.mtx
+Speedup : 2.571083
+/home/exchange/matrices/MM/Watson/chem_master1/chem_master1.mtx
+Speedup : 2.603419
