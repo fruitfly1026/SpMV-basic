@@ -1,0 +1,7 @@
+M : 4
+N : 3
+NNZ : 4
+R : 1.000000
+CSR perf : 1.317543
+COO perf : 1.692551
+Best_format : COO

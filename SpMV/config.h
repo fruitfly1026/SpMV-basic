@@ -15,4 +15,4 @@
 #define KERNEL_TAGS "./kernel_tags"
 #define DENSE_GFLOPS "./dense_gflops"
 
-#define MAT_FEATURES "./results/mat_features"
+#define MAT_FEATURES "./mat_features"

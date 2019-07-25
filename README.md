@@ -1,6 +1,8 @@
 # README #
 
-This is a repo for SpMV implementations for CSR, COO, DIA, ELL, and BCSR, with the input matrix in Matrix Market (.mtx) format.
+This is a repo for SpMV implementations for CSR, COO, DIA, ELL, and BCSR, with the input matrix in Matrix Market (.mtx) format. 
+
+For `simpler` branch, only simple SpMV implementations for CSR and COO are supported. 
 
 ### Install ###
 
@@ -13,11 +15,11 @@ This is a repo for SpMV implementations for CSR, COO, DIA, ELL, and BCSR, with t
 
 ### Source code structure ###
 
-* `include` contains include files and spmv implementations in `include/spmv_host`
+* `include` contains include files, spmv implementations in `include/spmv_host`, and sparse format conversion in `include/sparse_conversions.h`.
 * `src` contains I/O code for \*.mtx file
 * `test_scripts` is for testing plenty of matrices together by giving the matrix list.
 * `example_matrices` saves some small sparse matrices in mtx format.
-* `config*.h` and `kernel_tags*` are for different SpMV kernel execution. (Ignore them for now.)
+* `config*.h` are for different SpMV kernel execution. (Ignore them for now.)
 
 ### Contributors and Contacts ###
 

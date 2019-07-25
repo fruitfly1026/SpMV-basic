@@ -7,8 +7,6 @@ OBJS=driver.o src/mmio.o
 
 .cpp.o:
 	${CC} -o $@ -c ${FLAG} $<
-.s.o:
-	as -o $@ $< 
 
 spmv: ${OBJS}
 	${CC}  ${LDFLAG} -o $@ $^

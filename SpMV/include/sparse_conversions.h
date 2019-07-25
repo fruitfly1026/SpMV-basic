@@ -476,7 +476,7 @@ coo_matrix<IndexType, ValueType>
     printf("\tUsed count: %d\n", count);
     aver_x /= count;
     aver_y /= count;
-    printf("aver_x: %.2lf, aver_y: %.2lf\n", aver_x, aver_y);
+    printf("\taver_x: %.2lf, aver_y: %.2lf\n", aver_x, aver_y);
 
     double a_up = 0, a_down = 0;
     double a = 0, b = 0, r, c;

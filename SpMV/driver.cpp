@@ -100,18 +100,10 @@ void run_all_kernels(int argc, char **argv)
     }
     
     printf("\nfile=%s rows=%d cols=%d nonzeros=%d\n", mm_filename, csr.num_rows, csr.num_cols, csr.num_nonzeros);
+    fflush(stdout);
 
     //Input the best kernel for each format
-    int dia_kernel_tag = 0, ell_kernel_tag = 0, csr_kernel_tag = 0, coo_kernel_tag = 0, bcsr_kernel_tag = 0;
-    FILE *fp_tag;
-    fp_tag = fopen(KERNEL_TAGS, "r");
-    fscanf(fp_tag, "%d", &dia_kernel_tag);
-    fscanf(fp_tag, "%d", &ell_kernel_tag);
-    fscanf(fp_tag, "%d", &csr_kernel_tag);
-    fscanf(fp_tag, "%d", &coo_kernel_tag);
-    fscanf(fp_tag, "%d", &bcsr_kernel_tag);
-    fclose(fp_tag);
-
+    int dia_kernel_tag = 1, ell_kernel_tag = 1, csr_kernel_tag = 1, coo_kernel_tag = 1, bcsr_kernel_tag = 1;
     printf("dia_kernel_tag : %d\n", dia_kernel_tag );
     printf("ell_kernel_tag : %d\n", ell_kernel_tag );
     printf("csr_kernel_tag : %d\n", csr_kernel_tag );
