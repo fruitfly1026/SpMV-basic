@@ -1,29 +1,28 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a repo for SpMV implementations for CSR, COO, DIA, ELL, and BCSR, with the input matrix in Matrix Market (.mtx) format.
 
-### What is this repository for? ###
+### Install ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* `cd SpMV`
+* `make` (You may need to change some settings in Makefile).
 
-### How do I get set up? ###
+### Run tests ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* `./spmv [mtx file] [--precision=32/64]`
 
-### Contribution guidelines ###
+### Source code structure ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* `include` contains include files and spmv implementations in `include/spmv_host`
+* `src` contains I/O code for \*.mtx file
+* `test_scripts` is for testing plenty of matrices together by giving the matrix list.
+* `example_matrices` saves some small sparse matrices in mtx format.
+* `config*.h` and `kernel_tags*` are for different SpMV kernel execution. (Ignore them for now.)
 
-### Who do I talk to? ###
+### Contributors and Contacts ###
 
-* Repo owner or admin
-* Other community or team contact
+* Jiajia Li (fruitfly1026@gmail.com)
+
+### License ###
+
+This repo is released under the MIT License. Please see the 'LICENSE' file for details.
