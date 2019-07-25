@@ -19,7 +19,7 @@
 #pragma once
 #include <stdio.h>
 #include "sparse_formats.h"
-#include "config.h"
+#include "../config.h"
 #include "timer.h"
 
    

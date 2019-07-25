@@ -23,7 +23,7 @@
 #include "mem.h"
 #include "time.h"
 #include "rdtsc.h"
-#include "config.h"
+#include "../config.h"
 
 class timer
 {

@@ -22,7 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "mmio.h"
-#include "config.h"
+#include "../config.h"
 
 template <class IndexType,class ValueType>
 coo_matrix<IndexType,ValueType> read_coo_matrix(const char * mm_filename)

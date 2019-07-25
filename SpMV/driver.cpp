@@ -29,11 +29,6 @@ void usage(int argc, char** argv)
     std::cout << "\t" << argv[0] << " with following parameters:\n";
     std::cout << "\t" << " my_matrix.mtx\n";
     std::cout << "\t" << " --precision=32(or 64)\n";
-    std::cout << "\t" << " --max_diags_limit=20\n";
-    std::cout << "\t" << " --dia_fill_ratio=0.95\n";
-    std::cout << "\t" << " --min_diags_ratio=0.1\n";
-    std::cout << "\t" << " --ell_max_cols=100\n";
-    std::cout << "\t" << " --ell_min_deviation=1\n";
     std::cout << "Note: my_matrix.mtx must be real-valued sparse matrix in the MatrixMarket file format.\n"; 
 }
 
@@ -132,30 +127,14 @@ void run_all_kernels(int argc, char **argv)
 
     timer run_time_struct;
     
-    test_dia_matrix_kernels(csr, dia_kernel_tag, &dia_gflops, fp_feature);
-    fflush(stdout);
-    test_ell_matrix_kernels(csr, ell_kernel_tag, &ell_gflops, fp_feature);
-    fflush(stdout);
     test_csr_matrix_kernels(csr, csr_kernel_tag, &csr_gflops, fp_feature);
     fflush(stdout);
     test_coo_matrix_kernels(csr, coo_kernel_tag, &coo_gflops, fp_feature);
-    fflush(stdout);
-    test_bcsr_matrix_kernels(csr, bcsr_kernel_tag, &bcsr_gflops, &best_row_block_size, &best_col_block_size, &best_nonzeros_ratio, fp_feature);
     fflush(stdout);
 
     double run_time = run_time_struct.milliseconds_elapsed();
     printf ("Run time: %8.4lf ms\n", run_time);
 
-    if (max_gflops < dia_gflops)
-    {
-	   max_gflops = dia_gflops;
-	   best_format = "DIA";
-    }
-    if (max_gflops < ell_gflops)
-    {
-	   max_gflops = ell_gflops;
-	   best_format = "ELL";
-    }
     if (max_gflops < csr_gflops)
     {
 	   max_gflops = csr_gflops;
@@ -166,34 +145,20 @@ void run_all_kernels(int argc, char **argv)
 	   max_gflops = coo_gflops;
 	   best_format = "COO";
     }
-    if (max_gflops < bcsr_gflops)
-    {
-     max_gflops = bcsr_gflops;
-     best_format = "BCSR";
-    }
 
-   dia_diff = dia_gflops / max_gflops;
-   ell_diff = ell_gflops / max_gflops;
    csr_diff = csr_gflops / max_gflops;
    coo_diff = coo_gflops / max_gflops;
-   bcsr_diff = bcsr_gflops / max_gflops;
 
 #ifdef COLLECT_FEATURES
-    fprintf(fp_feature, "DIA perf : %lf\n", dia_gflops);
-    fprintf(fp_feature, "ELL perf : %lf\n", ell_gflops);
     fprintf(fp_feature, "CSR perf : %lf\n", csr_gflops);
     fprintf(fp_feature, "COO perf : %lf\n", coo_gflops);
-    fprintf(fp_feature, "BCSR perf : %lf\n", bcsr_gflops);
     fprintf (fp_feature, "Best_format : %s\n", best_format);
 #endif
     fclose (fp_feature);
 
     printf ("\n\nThe best format: %s\n", best_format);
-    printf ("DIA diff: %.2lf\n", dia_diff);
-    printf ("ELL diff: %.2lf\n", ell_diff);
     printf ("CSR diff: %.2lf\n", csr_diff);
     printf ("COO diff: %.2lf\n", coo_diff);
-    printf ("BCSR diff: %.2lf; best_row: %d; best_col: %d\n", bcsr_diff, best_row_block_size, best_col_block_size );
 
     delete_host_matrix(csr);
 }
