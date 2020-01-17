@@ -1,2 +1,4 @@
 .results/*
 *.o
+*.DS_Store
+sftp-config.json
