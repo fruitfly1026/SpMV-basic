@@ -398,7 +398,7 @@ void csr_to_coo(const IndexType * Ap,
 
 template <class IndexType, class ValueType>
 coo_matrix<IndexType, ValueType>
- csr_to_coo(const csr_matrix<IndexType,ValueType>& csr, FILE *fp_feature)
+ csr_to_coo(const csr_matrix<IndexType,ValueType>& csr)
 {  
     IndexType num_rows = csr.num_rows;
     IndexType num_cols = csr.num_cols;
@@ -408,7 +408,7 @@ coo_matrix<IndexType, ValueType>
     for(IndexType i = 0; i < num_rows; i++)
         nzs_per_row[i] = csr.Ap[i+1] - csr.Ap[i];
 
-    //Calculate the pow-law parameters
+    //Calculate the power-law parameters
     double *nzs_distribution = new_array<double>(num_cols+1);
     std::fill(nzs_distribution, nzs_distribution + num_cols+1, 0.0);
     IndexType number;
@@ -441,13 +441,10 @@ coo_matrix<IndexType, ValueType>
             }
         }
     }
-//    fprintf(fp, "Different nzs_per_row count: %d\n", total_count);
-//    fprintf(fp, "Total sum (should be 1): %f\n", total_sum);
-//    fclose(fp);
 
-    printf("\tDifferent nzs_per_row count: %d\n", total_count);
-    printf("\tTotal sum (should be 1): %f\n", total_sum);
-    printf("\tPeak ratio: %f,  corresponded row degree: %d\n", peak_ratio, peak_Rdegree);
+    // printf("\tDifferent nzs_per_row count: %d\n", total_count);
+    // printf("\tTotal sum (should be 1): %f\n", total_sum);
+    // printf("\tPeak ratio: %f,  corresponded row degree: %d\n", peak_ratio, peak_Rdegree);
 
     IndexType peak_pos_2 = 0;
     double *final_Pks = new_array<double>(total_count+1);
@@ -473,10 +470,10 @@ coo_matrix<IndexType, ValueType>
         aver_y += log10(final_Pks[i]);
     }
     assert ( count == (total_count - peak_pos + 1) );
-    printf("\tUsed count: %d\n", count);
+    // printf("\tUsed count: %d\n", count);
     aver_x /= count;
     aver_y /= count;
-    printf("\taver_x: %.2lf, aver_y: %.2lf\n", aver_x, aver_y);
+    // printf("\taver_x: %.2lf, aver_y: %.2lf\n", aver_x, aver_y);
 
     double a_up = 0, a_down = 0;
     double a = 0, b = 0, r, c;
@@ -495,17 +492,15 @@ coo_matrix<IndexType, ValueType>
     double test_sum = 0;
     for(IndexType i = 1; i < peak_pos; i++)
         test_sum += final_Pks[i] ;
-    printf("\tpart test_sum: %.2lf\n", test_sum);
+    // printf("\tpart test_sum: %.2lf\n", test_sum);
     for(IndexType i = peak_pos; i <= total_count; i++)
         test_sum += ( c* pow(final_ks[i], 0-r) );
     
-    printf("\ttest_sum: %.2lf (should similar to 1)\n", test_sum);
-    printf("\tr: %.2lf, c: %lf\n", r, c);
-    printf("\tr should be in (0,4)\n");
-
-#ifdef COLLECT_FEATURES
-    fprintf(fp_feature, "R : %lf\n", r);
-#endif
+    // printf("\ttest_sum: %.2lf (should similar to 1)\n", test_sum);
+    // printf("\n\tr: %.2lf, c: %lf\n", r, c);
+    // printf("\tr should be in (0,4)\n");
+    printf("r=%.2lf\n", r);
+    printf("r should be in (0,4) for power-law distribution.´\n\n\n");
 
     free(final_Pks);
     free(final_ks);

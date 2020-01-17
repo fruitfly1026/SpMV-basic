@@ -24,27 +24,6 @@
 
    
 template <typename IndexType, typename ValueType>
-size_t bytes_per_spmv(const dia_matrix<IndexType,ValueType>& mtx)
-{
-    // note: this neglects diag_offsets, which is < 1% of other parts
-    size_t bytes = 0;
-    bytes += 2*sizeof(ValueType) * mtx.num_nonzeros; // A[i,j] and x[j]
-    bytes += 2*sizeof(ValueType) * mtx.num_rows;     // y[i] = y[i] + ...
-    return bytes;
-}
-
-template <typename IndexType, typename ValueType>
-size_t bytes_per_spmv(const ell_matrix<IndexType,ValueType>& mtx)
-{
-    size_t bytes = 0;
-    bytes += 1*sizeof(IndexType) * mtx.num_nonzeros; // column index
-    bytes += 1*sizeof(ValueType) * mtx.stride * mtx.max_RD; // A[i,j] and padding
-    bytes += 1*sizeof(ValueType) * mtx.num_nonzeros; // x[j]
-    bytes += 2*sizeof(ValueType) * mtx.num_rows;     // y[i] = y[i] + ...
-    return bytes;
-}
-
-template <typename IndexType, typename ValueType>
 size_t bytes_per_spmv(const csr_matrix<IndexType,ValueType>& mtx)
 {
     size_t bytes = 0;
@@ -68,17 +47,6 @@ size_t bytes_per_spmv(const coo_matrix<IndexType,ValueType>& mtx)
     for(size_t n = 0; n < mtx.num_rows; n++)
         if(occupied_rows[n] == 1)
             bytes += 2*sizeof(ValueType);            // y[i] = y[i] + ...
-    return bytes;
-}
-
-template <typename IndexType, typename ValueType>
-size_t bytes_per_spmv(const bcsr_matrix<IndexType,ValueType>& mtx)
-{
-    size_t bytes = 0;
-    bytes += 2*sizeof(IndexType) * mtx.num_block_rows;     // row pointer
-    bytes += 1*sizeof(IndexType) * mtx.num_blocks * mtx.row_block_size * mtx.col_block_size; // column index
-    bytes += 2*sizeof(ValueType) * mtx.num_blocks * mtx.row_block_size * mtx.col_block_size; // A[i,j] and x[j]
-    bytes += 2*sizeof(ValueType) * mtx.num_rows;     // y[i] = y[i] + ...
     return bytes;
 }
 

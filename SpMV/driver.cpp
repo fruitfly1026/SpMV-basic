@@ -44,10 +44,6 @@ void run_all_kernels(int argc, char **argv)
         }
     }
 
-#ifdef COLLECT_FEATURES
-    FILE *fp_feature = fopen( MAT_FEATURES, "w");
-#endif
-
     csr_matrix<IndexType,ValueType> csr;
     
     if(mm_filename == NULL)
@@ -60,38 +56,6 @@ void run_all_kernels(int argc, char **argv)
         csr = read_csr_matrix<IndexType,ValueType>(mm_filename);
     printf("Using %d-by-%d matrix with %d nonzero values\n", csr.num_rows, csr.num_cols, csr.num_nonzeros); 
 
-#ifdef COLLECT_FEATURES
-    fprintf(fp_feature, "M : %d\n", csr.num_rows);
-    fprintf(fp_feature, "N : %d\n", csr.num_cols);
-    fprintf(fp_feature, "NNZ : %d\n", csr.num_nonzeros);
-#endif
-
-#ifdef TESTING
-//print in CSR format
-    printf("Writing matrix in CSR format to test_CSR ...\n");
-    FILE *fp = fopen("test_CSR", "w");
-    fprintf(fp, "%d\t%d\t%d\n", csr.num_rows, csr.num_cols, csr.num_nonzeros);
-    fprintf(fp, "csr.Ap:\n");
-    for (IndexType i=0; i<csr.num_rows+1; i++)
-    {
-      fprintf(fp, "%d  ", csr.Ap[i]);
-    }
-    fprintf(fp, "\n\n");
-    fprintf(fp, "csr.Aj:\n");
-    for (IndexType i=0; i<csr.num_nonzeros; i++)
-    {
-      fprintf(fp, "%d  ", csr.Aj[i]);
-    }
-    fprintf(fp, "\n\n");
-    fprintf(fp, "csr.Ax:\n");
-    for (IndexType i=0; i<csr.num_nonzeros; i++)
-    {
-      fprintf(fp, "%f  ", csr.Ax[i]);
-    }
-    fprintf(fp, "\n");
-    fclose(fp);
-#endif 
-
     // fill matrix with random values: some matrices have extreme values, 
     // which makes correctness testing difficult, especially in single precision
     srand(13);
@@ -99,58 +63,38 @@ void run_all_kernels(int argc, char **argv)
         csr.Ax[i] = 1.0 - 2.0 * (rand() / (RAND_MAX + 1.0)); 
     }
     
-    printf("\nfile=%s rows=%d cols=%d nonzeros=%d\n", mm_filename, csr.num_rows, csr.num_cols, csr.num_nonzeros);
-    fflush(stdout);
-
-    //Input the best kernel for each format
-    int dia_kernel_tag = 1, ell_kernel_tag = 1, csr_kernel_tag = 1, coo_kernel_tag = 1, bcsr_kernel_tag = 1;
-    printf("dia_kernel_tag : %d\n", dia_kernel_tag );
-    printf("ell_kernel_tag : %d\n", ell_kernel_tag );
-    printf("csr_kernel_tag : %d\n", csr_kernel_tag );
-    printf("coo_kernel_tag : %d\n", coo_kernel_tag );
-    printf("bcsr_kernel_tag : %d\n", bcsr_kernel_tag );
-    
-    double dia_gflops, ell_gflops, csr_gflops, coo_gflops, bcsr_gflops;
-    double dia_diff, ell_diff, csr_diff, coo_diff, bcsr_diff;
+    printf("\nfile=%s\n", mm_filename);
+    printf("rows=%d\n", csr.num_rows);
+    printf("cols=%d\n", csr.num_cols);
+    printf("nonzeros=%d\n", csr.num_nonzeros);
+ 
+    double csr_gflops, coo_gflops;
     double max_gflops = 0;
     char *best_format;
-    int best_row_block_size = 0, best_col_block_size = 0;
     double best_nonzeros_ratio = 0;
 
-    timer run_time_struct;
+    // timer run_time_struct;
     
-    test_csr_matrix_kernels(csr, csr_kernel_tag, &csr_gflops, fp_feature);
-    fflush(stdout);
-    test_coo_matrix_kernels(csr, coo_kernel_tag, &coo_gflops, fp_feature);
-    fflush(stdout);
+    coo_matrix<IndexType,ValueType> coo = csr_to_coo<IndexType,ValueType>(csr); 
+    delete_host_matrix(coo);
 
-    double run_time = run_time_struct.milliseconds_elapsed();
-    printf ("Run time: %8.4lf ms\n", run_time);
+    // test_csr_matrix_kernels(csr, &csr_gflops);
+    // test_coo_matrix_kernels(csr, &coo_gflops);
 
-    if (max_gflops < csr_gflops)
-    {
-	   max_gflops = csr_gflops;
-	   best_format = "CSR";
-    }
-    if (max_gflops < coo_gflops)
-    {
-	   max_gflops = coo_gflops;
-	   best_format = "COO";
-    }
+    // double run_time = run_time_struct.milliseconds_elapsed();
+    // printf ("Run time: %8.4lf ms\n", run_time);
 
-   csr_diff = csr_gflops / max_gflops;
-   coo_diff = coo_gflops / max_gflops;
-
-#ifdef COLLECT_FEATURES
-    fprintf(fp_feature, "CSR perf : %lf\n", csr_gflops);
-    fprintf(fp_feature, "COO perf : %lf\n", coo_gflops);
-    fprintf (fp_feature, "Best_format : %s\n", best_format);
-#endif
-    fclose (fp_feature);
-
-    printf ("\n\nThe best format: %s\n", best_format);
-    printf ("CSR diff: %.2lf\n", csr_diff);
-    printf ("COO diff: %.2lf\n", coo_diff);
+    // if (max_gflops < csr_gflops)
+    // {
+	   // max_gflops = csr_gflops;
+	   // best_format = "CSR";
+    // }
+    // if (max_gflops < coo_gflops)
+    // {
+	   // max_gflops = coo_gflops;
+	   // best_format = "COO";
+    // }
+    // printf ("\n\nThe best format: %s\n", best_format);
 
     delete_host_matrix(csr);
 }

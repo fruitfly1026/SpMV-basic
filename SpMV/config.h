@@ -1,6 +1,6 @@
 //General defines
 #define MAT_GRID_SIZE 512  //not use
-#define MAX_ITER 800
+#define MAX_ITER 10
 #define MAX_R 8
 #define MAX_C 8
 

@@ -28,29 +28,16 @@
 
 
 template <typename IndexType, typename ValueType>
-int test_csr_matrix_kernels(csr_matrix<IndexType,ValueType>& csr, int kernel_tag, double *gflops, FILE *fp_feature)
+int test_csr_matrix_kernels(csr_matrix<IndexType,ValueType>& csr, double *gflops)
 {
     printf("\n####  Testing CSR Kernels  ####\n");
 
     // TEST KERNELS
-    if ( kernel_tag == 1)
-    {
-      test_spmv_kernel(csr, spmv_csr_serial_host_simple<IndexType,ValueType>,   
-                       csr, spmv_csr_serial_host_simple<IndexType,ValueType>, 
-                       "csr_serial_simple");
+    test_spmv_kernel(csr, spmv_csr_serial_host_simple<IndexType,ValueType>,   
+                     csr, spmv_csr_serial_host_simple<IndexType,ValueType>, 
+                     "csr_serial_simple");
 
-      benchmark_spmv_on_host(csr,   spmv_csr_serial_host_simple<IndexType, ValueType>,       "csr_serial_simple" );
-    }
-    #if 0
-    else if ( kernel_tag == 2)
-    {
-      test_spmv_kernel(csr, spmv_csr_serial_host_simple<IndexType,ValueType>,   
-                       csr, spmv_csr_serial_host_sse<IndexType,ValueType>, 
-                       "csr_serial_sse");
-
-      benchmark_spmv_on_host(csr,   spmv_csr_serial_host_sse<IndexType, ValueType>,       "csr_serial_sse" );
-    }
-    #endif
+    benchmark_spmv_on_host(csr,   spmv_csr_serial_host_simple<IndexType, ValueType>,       "csr_serial_simple" );
 
     *gflops = csr.gflops;
     return 0;
@@ -58,35 +45,21 @@ int test_csr_matrix_kernels(csr_matrix<IndexType,ValueType>& csr, int kernel_tag
 
 
 template <typename IndexType, typename ValueType>
-int test_coo_matrix_kernels(const csr_matrix<IndexType,ValueType>& csr, int kernel_tag, double *gflops, FILE *fp_feature)
+int test_coo_matrix_kernels(const csr_matrix<IndexType,ValueType>& csr, double *gflops)
 {
     printf("\n####  Testing COO Kernels  ####\n");
 
     // CREATE COO MATRIX
     printf("\tcreating coo_matrix:");
-    coo_matrix<IndexType,ValueType> coo = csr_to_coo<IndexType,ValueType>(csr, fp_feature);  
-		//TODO change CSR to COO again, but COO is the input format from MM matrices.
+    coo_matrix<IndexType,ValueType> coo = csr_to_coo<IndexType,ValueType>(csr);  
     printf("\n");
 
     // TEST FORMAT
-    if ( kernel_tag == 1 )
-    {
-      test_spmv_kernel(csr, spmv_csr_serial_host_simple<IndexType,ValueType>, 
-                       coo, spmv_coo_serial_host_simple<IndexType,ValueType>, 
-                       "coo_serial_simple");
+    test_spmv_kernel(csr, spmv_csr_serial_host_simple<IndexType,ValueType>, 
+                     coo, spmv_coo_serial_host_simple<IndexType,ValueType>, 
+                     "coo_serial_simple");
 
-      benchmark_spmv_on_host(coo, spmv_coo_serial_host_simple<IndexType, ValueType>,     "coo_serial_simple");
-    }
-    #if 0
-    else if ( kernel_tag == 2 )
-    {
-      test_spmv_kernel(csr, spmv_csr_serial_host_simple<IndexType,ValueType>, 
-                       coo, spmv_coo_serial_host_sse<IndexType,ValueType>, 
-                       "coo_serial_sse");
-
-      benchmark_spmv_on_host(coo, spmv_coo_serial_host_sse<IndexType, ValueType>,     "coo_serial_sse");
-    }
-    #endif
+    benchmark_spmv_on_host(coo, spmv_coo_serial_host_simple<IndexType, ValueType>,     "coo_serial_simple");
  
     *gflops = coo.gflops;
     delete_host_matrix(coo);
