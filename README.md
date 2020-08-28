@@ -27,4 +27,4 @@ For `simpler` branch, only simple SpMV implementations for CSR and COO are suppo
 
 ### License ###
 
-This repo is released under the MIT License. Please see the 'LICENSE' file for details.
+This repo is released under the MIT License. Please see the 'LICENSE' file for details. Source code is developed based on the code written by Nathan Bell and Michael Garland at NVIDIA.
